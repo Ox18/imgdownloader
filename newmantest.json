@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "6dee5c20-8b55-49a8-b661-6b2918650deb",
+		"name": "ms-product-culqify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21068315"
+	},
+	"item": [
+		{
+			"name": "transversal",
+			"item": [
+				{
+					"name": "get-by-slug",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"slug\": \"{{test-slug}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-by-slug",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-by-slug"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-paginated",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"page\": 1,\n        \"limit\": 5\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-paginated",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-paginated"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-merchant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"merchantId\": \"{{test-merchant-id}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-by-merchant",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-by-merchant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "secure",
+			"item": [
+				{
+					"name": "secure-list-default-by-slug",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"productType\": \"{{test-product-type-slug}}\"   \n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/secure/list-default-by-slug",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"secure",
+								"list-default-by-slug"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "internal",
+			"item": [
+				{
+					"name": "internal-delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"id\": \"{{test-delete-id}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "internal-get-by-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"id\": \"{{test-id}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-by-id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-by-id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "internal-get-by-merchant-pk",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"publicKey\": \"{{test-pk}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-by-merchant-pk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-by-merchant-pk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "internal-get-by-ids",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"ids\": [\"5e359ec809fae10019901689\"]\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-lives-by-ids",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-lives-by-ids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "internal-get-by-merchant-sk",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"privateKey\": \"{{test-sk}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/get-by-merchant-sk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"get-by-merchant-sk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "internal-rsa-get-by-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"id\": \"{{test-rsa-id}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/rsa/get-by-id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"rsa",
+								"get-by-id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rsa-get-records",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta correcta\", () => {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const responseBody = pm.response.json();",
+									"",
+									"    if ('error' in responseBody) {",
+									"        pm.expect.fail('Hubo un error al llamar a la solicitud: <<\"' + responseBody.error.message + '\">>')",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"publicKey\": \"{{test-rsa-pk}}\",\n        \"hash\": \"{{test-rsa-hash}}\"\n    },\n    \"meta\": {\n        \"serviceId\": \"ms-accounts\",\n        \"timestamp\": \"2022-06-15T00:00:00.123Z-0500\",\n        \"request\": {\n            \"traceId\": \"456\",\n            \"ipAddress\": \"127.0.0.1\",\n            \"userId\": \"63fb0c37118c700011b57385\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/internal/rsa/get-records",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"internal",
+								"rsa",
+								"get-records"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
