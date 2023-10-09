@@ -1,0 +1,75 @@
+{
+	"id": "d31d5fcc-60ee-4b15-9f59-bca5bbedf112",
+	"name": "ms-products",
+	"values": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-slug",
+			"value": "2kNYqdI3AoKVr5QG",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-merchant-id",
+			"value": "60f091b7a1e62c001cfeaf04",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-product-type-slug",
+			"value": "cJDGR5Soh9UnQ03a",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-delete-id",
+			"value": "5e359c6d09fae10019901656",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-id",
+			"value": "5e382ae6c2113a0014418403",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-pk",
+			"value": "pk_test_8b2403a1f8b95af2",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-sk",
+			"value": "sk_live_ed8d7313142c5c8c",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-rsa-id",
+			"value": "6463e93e8d764500116af3aa",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-rsa-pk",
+			"value": "pk_live_53d22e51b61a43d1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "test-rsa-hash",
+			"value": "c223b841-0ede-4c90-9609-0bce9d9bc895",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-10-09T21:22:38.559Z",
+	"_postman_exported_using": "Postman/10.18.11"
+}
